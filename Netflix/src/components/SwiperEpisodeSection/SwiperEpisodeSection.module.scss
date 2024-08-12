@@ -1,0 +1,81 @@
+.swiperSection {
+	select {
+		background-color: transparent;
+
+		color: white;
+		border: none;
+		font-size: 1.15rem;
+		outline: none;
+		option {
+			background-color: rgb(40, 40, 40); /* Фон опций */
+			color: white; /* Цвет текста */
+			border: none; /* Убираем границы */
+		}
+	}
+	.mySwiper {
+		padding: 20px;
+
+
+
+		>div {
+
+
+			>div {
+				
+
+				transition: opacity 0.3s ease,
+				box-shadow 0.3s ease;
+				opacity: 1;
+				border-radius: 16px;
+
+
+				img {
+					aspect-ratio: 16/9;
+					opacity: 1;
+					width: 100%;
+					border-radius: 16px;
+					position: relative;
+					box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0);
+					transition: box-shadow 0.3s ease;
+
+					&:hover {
+						box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.07);
+					}
+				}
+
+
+
+				.genre {
+					position: absolute;
+					left: 10px;
+					top: 10px;
+					margin: 0;
+					backdrop-filter: blur(10px) invert(0.1);
+
+					width: fit-content;
+					padding: 4px 12px;
+					border-radius: 30px;
+					text-align: center;
+
+				}
+
+
+				.info {
+					color: white;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					font-size: 1.05rem;
+				}
+
+
+
+
+
+
+			}
+
+
+		}
+	}
+}

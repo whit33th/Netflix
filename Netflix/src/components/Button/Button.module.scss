@@ -1,0 +1,28 @@
+.button{
+	border: 2px solid #fff;
+	background-color: transparent;
+	border-radius: 30px;
+	padding: 5px 0;
+	color: white;
+	outline: none;
+	transition: opacity 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	font-size: 18px;
+	gap: 5px;
+	font-weight: bold;
+	backdrop-filter: blur(10px) ;
+	&:hover{
+		opacity: 0.8;
+		transition: opacity 0.3s;
+		i{
+			color: red;
+		}
+	}
+	i {
+		font-size: 36px;
+		
+	}
+}

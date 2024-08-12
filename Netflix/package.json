@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",                  // Для разработки
-    "build": "vite build",          // Для сборки проекта
-    "lint": "eslint .",             // Для линтинга
-    "preview": "vite preview",      // Для предпросмотра собранного проекта
-    "start": "vite preview --port 3000"  // Запуск для продакшн
+    "dev": "vite",                  
+    "build": "vite build",          
+    "lint": "eslint .",             
+    "preview": "vite preview",      
+    "start": "vite preview --port 3000" 
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -10,7 +10,7 @@ function YoutubePlayerFilm({ videoId }) {
         
         videoId: videoId,
         playerVars: {
-          autoplay: 0,
+          autoplay: 1,
           controls: 2,
           playlist: videoId,
           

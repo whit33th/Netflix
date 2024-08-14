@@ -11,6 +11,14 @@
 
 	span{
 		white-space: nowrap;
+
+	
+
+		@media (max-width: 900px) {
+			display: none;
+
+
+		}
 		
 	}
 

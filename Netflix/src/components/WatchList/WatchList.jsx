@@ -38,7 +38,7 @@ function WatchList() {
 				watchList.map((v) => (
 					<div key={v._id}>
 
-						<Link>
+						<Link to={'/' + v.type + '/' + v.name.replace(/\s+/g, '-')}>
 							<img src={v.img} alt="" />
 						</Link>
 						<div className={s.info}>

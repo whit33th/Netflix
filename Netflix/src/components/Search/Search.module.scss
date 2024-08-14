@@ -4,16 +4,10 @@
 	border: 2px solid rgb(47, 47, 47);
 	display: flex;
 	align-items: center;
-
 	div {
 		display: flex;
 		align-items: center;
-		
-
 	}
-
-
-
 	input {
 		width: 200px;
 		font-size: 0.9rem;
@@ -24,20 +18,15 @@
 		outline: none;
 		color: white;
 		transition: width 0.4s;
-		
 		@media (max-width: 1200px) {
 			width: 180px; 
 		}
 		@media (max-width: 900px) {
 			width: 120px; 
 		}
-	
 		@media (max-width: 600px) {
 			width: 80px; 
 			display: none;
 		}
-
 	}
-
-
 }

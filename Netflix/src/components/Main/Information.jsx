@@ -10,11 +10,11 @@ function Information() {
 		<div className={s.info}>
 			<YoutubePlayerPreload className={s.Youtube} videoId={youtubeVideoId} />
 
-			<img className={s.logo} src="https://www.escapelive.co.uk/wp-content/uploads/2022/02/peaky-blinders-logo.png"  alt="" />
+			<img rel="preload" className={s.logo} src="https://ik.imagekit.io/fqhavjbxy/peaky-blinders-logo.webp?updatedAt=1723639477498"  alt="" />
 
 			<div className={s.details}>
 				<div>
-					<img src={imdb} alt="" />
+					<img loading='lazy' src={imdb} alt="" />
 					<span>7.2</span>
 				</div>
 

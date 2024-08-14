@@ -1,6 +1,4 @@
 import s from "./SmallButton.module.scss"
-
-
 function SmallButton({ children, cb }) {
 	return (
 		<button onClick={cb} className={s.button}>
@@ -8,5 +6,4 @@ function SmallButton({ children, cb }) {
 		</button>
 	)
 }
-
 export default SmallButton

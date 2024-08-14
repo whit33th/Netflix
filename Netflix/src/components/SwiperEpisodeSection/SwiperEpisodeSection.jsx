@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import s from './SwiperEpisodeSection.module.scss'
-
 // import required modules
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
@@ -10,18 +9,14 @@ import 'swiper/css/scrollbar'
 import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import SwiperNavButts from '../SwiperSection/SwiperNavButts'
-
 function SwiperEpisodeSection() {
 	const [width, setWidth] = useState(window.innerWidth);
-
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
-    
     // Cleanup on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-	
 	const [currentSeason, setCurrentSeason] = useState(1)
 	const swiperRef = useRef(null) // Создаем реф для Swiper
 	const Episodes = [
@@ -234,7 +229,6 @@ function SwiperEpisodeSection() {
 			season: 5,
 			rating: '5.0'
 		},
-
 		{
 			_id: 1,
 			name: '1 | Black Day',
@@ -277,24 +271,15 @@ function SwiperEpisodeSection() {
 			season: 6,
 			rating: '5.0'
 		},
-
 	]
-
 	useEffect(() => {
-
 		swiperRef.current.swiper.slideTo(0)
-
 	}, [currentSeason])
-
-
 	const uniqueSeasons = [...new Set(Episodes.map(t => t.season))]
-
-
 	function handleSeason(e) {
 		setCurrentSeason(parseInt(e.target.value))
 	}
 	const filteredBySeason = Episodes.filter(t => t.season === (currentSeason))
-
 	return (
 		<div className={s.swiperSection}>
 			<select value={currentSeason} name="Season" id="season" onChange={handleSeason}>
@@ -303,26 +288,21 @@ function SwiperEpisodeSection() {
 						<option key={u} value={u}>Season {u}</option>
 					))
 				}
-
-
 			</select>
 			<Swiper
 				ref={swiperRef}
 				slidesPerView={width > 1024 ? 4.5 : width > 768 ? 3 : 2}
 				spaceBetween={30}
 				modules={[Pagination]}
-
 				className={s.mySwiper}
 			>
-				
 				{
 					filteredBySeason.map((t) => (
-
 						<>
 							<SwiperSlide key={t._id} >
 								<Link to='/series/Peaky-Blinders'>
 									<div>
-										<img src={t.img} alt="" />
+										<img loading="lazy" src={t.img} alt="" />
 										<p className={s.genre} ><i className='bx bxs-star' ></i> {t.rating}</p>
 										<div className={s.info}>
 											<p>{t.name}</p>
@@ -330,25 +310,12 @@ function SwiperEpisodeSection() {
 										</div>
 									</div>
 								</Link>
-								
 							</SwiperSlide>
 						</>
-
-
-
-
-
-
-
 					))
-
 				}
-
-
-
 			</Swiper>
 		</div>
 	)
 }
-
 export default SwiperEpisodeSection

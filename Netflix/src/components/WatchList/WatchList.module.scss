@@ -3,20 +3,16 @@
 	grid-template-columns: repeat(5, 1fr);
 	gap: 20px;
 	padding: 40px;
-
 	>div {
 		width: 100%;
-
 		a {
 			display: flex;
 			gap: 20px;
 			flex-direction: column;
-
 			img {
 				width: 100%;
 			}
 		}
-
 		.info {
 			color: white;
 			display: flex;
@@ -28,9 +24,6 @@
 			p{
 				margin: 0;
 			}
-
 		}
-
-
 	}
 }

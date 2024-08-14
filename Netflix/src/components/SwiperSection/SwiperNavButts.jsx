@@ -1,8 +1,6 @@
 import React from 'react'
 import { useSwiper } from 'swiper/react'
 import s from './SwiperSection.module.scss'
-
-
 function SwiperNavButts() {
 	const swiper = useSwiper()
 	return (
@@ -16,5 +14,4 @@ function SwiperNavButts() {
 		</div>
 	)
 }
-
 export default SwiperNavButts

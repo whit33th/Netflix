@@ -6,7 +6,6 @@
 	background-color: #141414;
 	justify-content: space-between;
 	gap: 20px;
-	
 	.logo{
 		width: auto;
 		height: 32px;
@@ -16,7 +15,6 @@
 		@media (max-width: 900px) {
 			height: 28px; 
 		}
-	
 		@media (max-width: 600px) {
 			height: 26px; 
 		}
@@ -24,7 +22,6 @@
 	div {
 		display: flex;
 		align-items: center;
-		
 	}
 	a{
 		display: contents
@@ -38,7 +35,6 @@
 		@media (max-width: 900px) {
 			gap: 50px; 
 		}
-	
 		@media (max-width: 600px) {
 			gap: 25px; 
 		}
@@ -46,6 +42,5 @@
 	i {
 		padding: 10px;
 		font-size: 24px;
-
 	}
 }

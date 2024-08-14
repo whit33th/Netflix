@@ -1,26 +1,17 @@
 .profile {
 	gap: 50px;
-
 	div {
 		display: flex;
-		
 		align-items: center;
 		gap: 5px;
-		
 		i{
 			padding: 0;
 		}
-
-		
-
 		img {
 			width: 32px;
 			height: 32px;
 			border: 2px solid #ffffffb4;
 			border-radius: 50%;
 		}
-
-
-
 	}
 }

@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import videoMaterials from '../../data/VideoMaterial'
 import s from './PopularSection.module.scss'
-
 function PopularSection() {
 	return (
 		<div className={s.popularSection}>
@@ -17,13 +16,10 @@ function PopularSection() {
 							</div>
 						</Link>
 					</div>
-
 				</>
 			))
 			}
 		</div >
-
 	)
 }
-
 export default PopularSection

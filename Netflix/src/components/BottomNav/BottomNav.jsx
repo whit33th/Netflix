@@ -1,5 +1,4 @@
 import s from './BottomNav.module.scss'
-
 function BottomNav({activeTab, setActiveTab}) {
 	const Tabs = ['Overview','Episodes','Details']
 	return (
@@ -10,5 +9,4 @@ function BottomNav({activeTab, setActiveTab}) {
 		</div>
 	)
 }
-
 export default BottomNav

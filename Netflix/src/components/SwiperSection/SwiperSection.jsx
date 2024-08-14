@@ -9,22 +9,16 @@ import { Link } from 'react-router-dom';
 import videoMaterials from '../../data/VideoMaterial';
 import SmallButton from '../SmallButton/SmallButton';
 import SwiperNavButts from './SwiperNavButts'
-
 function SwiperSection({ genre = 'Trending Now', type = 'series' }) {
   const [width, setWidth] = useState(window.innerWidth);
-
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
-  
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
   const [watchLater, setWatchLater] = useState([]);
-
   useEffect(() => {
     const savedWatchLater = localStorage.getItem("watchLater");
-
     if (savedWatchLater) {
       try {
         const parsedWatchLater = JSON.parse(savedWatchLater);
@@ -40,7 +34,6 @@ function SwiperSection({ genre = 'Trending Now', type = 'series' }) {
       }
     }
   }, []);
-
   const addToWatchLater = useCallback((_id) => {
     setWatchLater(prevWatchLater => {
       const updatedWatchLater = [...prevWatchLater];
@@ -53,11 +46,9 @@ function SwiperSection({ genre = 'Trending Now', type = 'series' }) {
       return updatedWatchLater;
     });
   }, []);
-
   const filterByCriteria = videoMaterials.filter(l =>
     Array.isArray(l.genre) && l.genre.includes(genre) && l.type === type
   );
-
   return (
     <div className={s.swiperSection}>
       <h1>{genre}</h1>
@@ -71,7 +62,7 @@ function SwiperSection({ genre = 'Trending Now', type = 'series' }) {
           <SwiperSlide className={s.swiperWrapper} key={t._id}>
             <div>
               <Link to={'/' + t.type + '/' + t.name.replace(/\s+/g, '-')}>
-                <img src={t.img} alt={t.name} />
+                <img loading="lazy" src={t.img} alt={t.name} />
                 <p className={s.genre}>{genre}</p>
               </Link>
               <div className={s.info}>
@@ -82,7 +73,6 @@ function SwiperSection({ genre = 'Trending Now', type = 'series' }) {
                 </SmallButton>
               </div>
             </div>
-						
           </SwiperSlide>
         ))}
 				<SwiperNavButts/>
@@ -90,5 +80,4 @@ function SwiperSection({ genre = 'Trending Now', type = 'series' }) {
     </div>
   );
 }
-
 export default SwiperSection;

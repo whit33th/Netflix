@@ -1,13 +1,10 @@
 .swiperSection {
 	padding: 0 20px;
 	position: relative;
-
 	.mySwiper {
-		
 		.buttons {
 			display: flex;
 			gap: 10px;
-
 			button {
 				background-color: transparent;
 				color: white;
@@ -20,59 +17,38 @@
 				font-size: 30px;
 				height: 40px;
 				width: 40px;
-				
-
 			}
-
-			
 		}
-
-
 		>div {
 			.h1 {
 				margin-top: 0;
 			}
-
-
 			>div {
-
 				transition: opacity 0.3s ease, box-shadow 0.3s ease;
 				opacity: 1;
 				border-radius: 16px;
-
-
-
 				img {
-
 					width: 100%;
-
 					aspect-ratio: 16/9;
 					border-radius: 16px;
 					position: relative;
 					box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0);
 					transition: box-shadow 0.3s ease;
-
 					&:hover {
 						box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.07);
 					}
 				}
-
-
-
 				.genre {
 					position: absolute;
 					left: 10px;
 					top: 10px;
 					margin: 0;
 					backdrop-filter: blur(10px) invert(0.1);
-
 					width: fit-content;
 					padding: 4px 12px;
 					border-radius: 30px;
 					text-align: center;
-
 				}
-
 				.info {
 					color: white;
 					display: flex;
@@ -81,19 +57,15 @@
 					font-size: 1.05rem;
 					gap: 5px;
 					padding: 10px 0;
-
 					p {
 						margin: 0;
 					}
-
 					>div {
 						display: flex;
 						gap: 5px;
 					}
 				}
 			}
-
-
 		}
 	}
 }

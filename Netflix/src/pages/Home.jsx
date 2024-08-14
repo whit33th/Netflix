@@ -1,12 +1,8 @@
-
 import SwiperSection from '../components/SwiperSection/SwiperSection'
 import MovieIntro from './../components/Main/MovieIntro'
-
-
 function Home() {
 	return (
 		<>
-
 			<MovieIntro />
 			<div>
 				<SwiperSection genre={'Drama'} />
@@ -17,5 +13,4 @@ function Home() {
 		</>
 	)
 }
-
 export default Home

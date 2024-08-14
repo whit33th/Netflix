@@ -1,36 +1,25 @@
 .divClip {
 	position: relative;
-	
+	min-height: calc(100vh - 80px);
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-
 	* {
 		z-index: 1;
 		position: sticky;
 	}
-
 	.videoSection {
 		height: calc(100vh - 80px);
-		
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		
-		
-
 		.videoPlayer {
 			width: 100%;
 			height: calc(100vh - 80px);
-			
-
 		}
-
 	}
-
 	.background {
-
 		height: 100%;
 		width: 100%;
 		filter: blur(100px);
@@ -38,6 +27,5 @@
 		top: 0;
 		left: 0;
 		z-index: 0;
-
 	}
 }

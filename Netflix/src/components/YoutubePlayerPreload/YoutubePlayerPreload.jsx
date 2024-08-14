@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import s from './yt.module.scss';
-
 function YoutubePlayerPreload({ videoId }) {
   const playerRef = useRef(null);
   const playerInstanceRef = useRef(null); // Ссылка на экземпляр YouTube-плеера
   const [isVideoPlaying, setIsVideoPlaying] = useState(false); // Состояние для отслеживания, запустилось ли видео
-
   useEffect(() => {
     const onYouTubeIframeAPIReady = () => {
       playerInstanceRef.current = new window.YT.Player(playerRef.current, {
@@ -24,31 +22,26 @@ function YoutubePlayerPreload({ videoId }) {
         },
       });
     };
-
     const onPlayerReady = (event) => {
       event.target.mute();
       event.target.playVideo();
     };
-
     const onPlayerStateChange = (event) => {
       if (event.data === window.YT.PlayerState.PLAYING) {
         setIsVideoPlaying(true); // Если видео воспроизводится, обновляем состояние
       }
     };
-
     if (window.YT) {
       onYouTubeIframeAPIReady();
     } else {
       window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
     }
   }, [videoId]);
-
   const handleManualPlay = () => {
     if (playerInstanceRef.current && playerInstanceRef.current.playVideo) {
       playerInstanceRef.current.playVideo(); // Запуск видео вручную
     }
   };
-
   return (
     <div className={s.youtubeContainer}>
       <div id="player" ref={playerRef} className={s.youtube}></div>
@@ -61,5 +54,4 @@ function YoutubePlayerPreload({ videoId }) {
     </div>
   );
 }
-
 export default YoutubePlayerPreload;

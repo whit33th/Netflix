@@ -8,22 +8,13 @@
 	align-items: center;
 	transition: 0.3s;
 	gap: 5px;
-
 	span{
 		white-space: nowrap;
-
-	
-
 		@media (max-width: 900px) {
 			display: none;
-
-
 		}
-		
 	}
-
 	&:hover {
 		opacity: 0.8;
-
 	}
 }

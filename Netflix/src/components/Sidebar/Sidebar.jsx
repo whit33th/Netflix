@@ -4,7 +4,14 @@ import { Link } from 'react-router-dom'
 
 function Sidebar({sidebarIsActive, setSidebarIsActive}) {
 
-	const links = ["Popular", "TV Shows", "Films", "My list"]
+	const links = [
+		{ name: "Home", path: "/" },
+		{ name: "Popular", path: "/popular" },
+		{ name: "TV Shows", path: "/tvshows" },
+		{ name: "Films", path: "/films" },
+		{ name: "My list", path: "/mylist" }
+	];
+	
 
 	const width = sidebarIsActive ? '15%' : '3%'
 	const arrowDirection = sidebarIsActive ? 'bx bx-arrow-to-left' : 'bx bx-arrow-to-right'
@@ -27,9 +34,9 @@ function Sidebar({sidebarIsActive, setSidebarIsActive}) {
 			<div className={`${s.links} ${ sidebarIsActive ? s.active : ''}`} >
 				<ul>
 					{links.map((link) => (
-						<li key={link}>
-							<Link to={'/'+link.replace(/\s+/g, '-')}>
-								<p>{link}</p>
+						<li key={link.name}>
+							<Link to={link.path}>
+								<p>{link.name}</p>
 							</Link>
 
 

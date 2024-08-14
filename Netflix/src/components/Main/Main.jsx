@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import s from './Main.module.scss'
 import { useState } from 'react'
 import Home from '../../pages/Home'
+import WatchList from '../WatchList/WatchList'
+import Popular from '../../pages/Popular'
+import VideoPage from '../../pages/VideoPage'
 
 
 
@@ -17,7 +20,11 @@ function Main() {
 			<Sidebar sidebarIsActive={sidebarIsActive} setSidebarIsActive={setSidebarIsActive} />
 			<div className={s.content} style={{ width }}>
 				<Routes>
-					<Route path="/Popular" element={<Home/>} />
+					<Route path="/" element={<Home/>} />
+					<Route path="/popular" element={<Popular/>} />
+					<Route path="/mylist" element={<WatchList/>} />
+					<Route path="/series/:id" element={<VideoPage />} />
+        <Route path="/movie/:id" element={<VideoPage />} />
 				</Routes>
 
 				

@@ -272,7 +272,7 @@ function SwiperEpisodeSection() {
 
 						<>
 							<SwiperSlide key={t._id} >
-								<Link>
+								<Link to='/series/Peaky-Blinders'>
 									<div>
 										<img src={t.img} alt="" />
 										<p className={s.genre} >Season {t.season}</p>

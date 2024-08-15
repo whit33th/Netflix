@@ -25,6 +25,7 @@ function WatchList() {
 		loadWatchList()
 	}
 	return (
+		
 		<div className={s.gridScreen}>
 			{
 				watchList.map((v) => (
@@ -35,7 +36,7 @@ function WatchList() {
 						<div className={s.info}>
 							<p>{v.name}</p>
 							<SmallButton cb={() => deleteToWatchLater(v._id)}>
-								<span>Delete</span>
+							<i className='bx bx-trash'></i>
 							</SmallButton>
 						</div>
 					</div>

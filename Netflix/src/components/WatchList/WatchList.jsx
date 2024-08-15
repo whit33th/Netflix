@@ -26,7 +26,7 @@ function WatchList() {
 	}
 	return (
 		<>
-			{watchList ? <div className={s.empty}>Your list is empty</div> : ''}
+			{watchList.length ? <div className={s.empty}>Your list is empty</div> : ''}
 			<div className={s.gridScreen}>
 				{
 					watchList.map((v) => (

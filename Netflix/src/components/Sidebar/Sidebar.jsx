@@ -1,6 +1,9 @@
 import s from './Sidebar.module.scss'
 import { Link } from 'react-router-dom'
-function Sidebar({sidebarIsActive, setSidebarIsActive}) {
+import useMyStore from '../../store/store';
+
+function Sidebar() {
+	const {isSidebarOpen, setSidebarOpen} = useMyStore()
 	const links = [
 		{ name: "Home", path: "/" },
 		{ name: "Popular", path: "/popular" },
@@ -8,17 +11,16 @@ function Sidebar({sidebarIsActive, setSidebarIsActive}) {
 		{ name: "Films", path: "/films" },
 		{ name: "My list", path: "/mylist" }
 	];
-	const width = sidebarIsActive ? '15%' : '3%'
-	function handleSidebar() {
-		setSidebarIsActive(!sidebarIsActive)
-	}
+	const width = isSidebarOpen ? '15%' : '3%'
+
+	
 	return (
 		<div className={s.sidebar} style={{ width }} >
 			<div className={s.sidebarButton} >
-				<i onClick={handleSidebar} className='bx bx-menu'></i>
+				<i onClick={setSidebarOpen} className='bx bx-menu'></i>
 				
 			</div>
-			<div className={`${s.links} ${ sidebarIsActive ? s.active : ''}`} >
+			<div className={`${s.links} ${ isSidebarOpen ? s.active : ''}`} >
 				<ul>
 					{links.map((link) => (
 						<li key={link.name}>

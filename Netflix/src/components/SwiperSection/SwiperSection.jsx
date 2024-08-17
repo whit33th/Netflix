@@ -68,7 +68,7 @@ function SwiperSection({ genre = 'Trending Now', type = 'series' }) {
               <div className={s.info}>
                 <p>{t.name}</p>
                 <SmallButton cb={() => addToWatchLater(t._id)}>
-                  <i className='bx bx-time'></i>
+                  {watchLater.includes(t._id) ? <i style={{fontSize: '16px'}} className='bx bx-list-check'></i>  :  <i className='bx bx-time'></i> } 
                   <span>{watchLater.includes(t._id) ? 'Already added' : 'Add to list'}</span>
                 </SmallButton>
               </div>

@@ -1,7 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit'
-export default configureStore({
-	reducer: {
-		categories: 'cat',
-	},
-	devTools: true
-})
+import {create} from 'zustand'
+
+
+const useMyStore = create((set) => ({
+	isSidebarOpen: false,
+	setSidebarOpen:() => set((state) => ({isSidebarOpen: !state.isSidebarOpen}))
+}))
+
+export default useMyStore
